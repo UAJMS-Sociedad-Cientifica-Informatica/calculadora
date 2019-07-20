@@ -8,6 +8,8 @@
  *
  * @author Usuario
  */
+import java.util.ArrayList;
+
 public class Calculadora extends javax.swing.JFrame {
 
     /**
@@ -260,8 +262,13 @@ public class Calculadora extends javax.swing.JFrame {
         jTextField1.setText(jTextField1.getText()+"1");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {
+	String cad = jTextField1.getText();
+	entrada e = new entrada();
+	ArrayList l = e.separar(cad);
+	Resultado r = new Resultado();
+	float resultado = r.resultado(l);
+	jTextField1.setText(resultado+"");
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
